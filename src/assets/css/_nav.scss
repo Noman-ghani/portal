@@ -1,0 +1,44 @@
+.nav {
+    .nav-item {
+        a {
+            line-height: 16px;
+            display: block;
+            position: relative;
+            padding: 16px 0;
+            text-decoration: none;
+            text-align: center;
+            text-shadow: none;
+            box-shadow: none;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            white-space: nowrap;
+            transition: color .1s linear 0s;
+            font-weight: 700;
+            font-size: 15px;
+            color: rgba(16, 25, 40, .55);
+            margin: auto 16px;
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                width: 100%;
+                display: block;
+                height: 4px;
+                content: "";
+                opacity: 0;
+                transition: opacity .1s linear 0s;
+                background-color: var(--primary);
+                border-radius: 3px;
+            }
+            &.active {
+                color: var(--primary);
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

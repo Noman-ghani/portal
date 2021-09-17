@@ -1,0 +1,20 @@
+#  Template NodeJS build
+
+#  This template allows you to validate your NodeJS code.
+#  The workflow allows running tests and code linting on the default branch.
+
+image: node:10.15.3
+
+pipelines:
+  branches:
+    staging:
+      - step:
+            name: Deployment To Staging
+            caches:
+              - node
+            script:
+              - apt-get update
+              - apt-get install openssh-client -y
+              - apt-get install unzip -y
+              - chmod 400 servu_v3_portal_staging.pem
+              - ssh -i servu_v3_portal_staging.pem ec2-user@ec2-54-175-94-162.compute-1.amazonaws.com 'bash -s' < execute.sh

@@ -1,0 +1,46 @@
+.table, .table-responsive {
+    margin: 0;
+    background: #FFFFFF;
+    box-shadow: 0 2px 5px 0 rgb(164 173 186 / 25%);
+    border-collapse: collapse;
+    font-size: 14px;
+    thead {
+        th {
+            border: 0;
+            padding: 16px 8px;
+            &:first-child {
+                padding-left: 16px;
+            }
+            &:last-child {
+                padding-right: 16px;
+            }
+        }
+    }
+    tbody {
+        td, th {
+            padding: 16px 8px;
+            vertical-align: middle;
+            &:first-child {
+                padding-left: 16px;
+            }
+            &:last-child {
+                padding-right: 16px;
+            }
+        }
+    }
+    tfoot {
+        td, th {
+            padding: 16px 8px;
+            vertical-align: middle;
+            &:first-child {
+                padding-left: 16px;
+            }
+            &:last-child {
+                padding-right: 16px;
+            }
+        }
+    }
+    .b-table-top-row {
+        background-color: #F7F7F7;
+    }
+}
